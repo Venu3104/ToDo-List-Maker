@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container my-5">
+    <h2>About This Project</h2>
+    <p>
+        <strong>My-ToDo</strong> is a simple web-based ToDo list application built with Flask and Bootstrap. It allows
+        users to add, update, delete, and search their tasks efficiently.
+    </p>
+    <hr>
+    <h4>How to Use</h4>
+    <ol>
+        <li>To add a new task, fill in the "ToDo List" and "ToDo Description" fields on the home page and click
+            <strong>Submit</strong>.</li>
+        <li>Your tasks will appear in the "MY TODO List" table below the form.</li>
+        <li>To update a task, click the <strong>Update</strong> button next to it, edit the details, and submit.</li>
+        <li>To delete a task, click the <strong>Delete</strong> button next to it.</li>
+        <li>Use the <strong>Search</strong> bar in the navigation to filter your tasks in real-time.</li>
+    </ol>
+    <hr>
+    <h4>Development</h4>
+    <ul>
+        <li><strong>Backend:</strong> Python, Flask, Flask-SQLAlchemy (SQLite database)</li>
+        <li><strong>Frontend:</strong> HTML, Bootstrap 5, JavaScript (for live search)</li>
+        <li><strong>Features:</strong> Add, update, delete, and search tasks; responsive design; persistent storage.
+        </li>
+        <li><strong>Developer:</strong> Venu</li>
+    </ul>
+    <p>
+        This project demonstrates the basics of full-stack web development using Flask and Bootstrap, including CRUD
+        operations and AJAX-based search.
+    </p>
+</div>
+{% endblock body %}

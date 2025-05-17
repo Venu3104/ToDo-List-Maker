@@ -1,0 +1,89 @@
+body {
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  min-height: 100vh;
+  color: #1e293b;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  background: linear-gradient(90deg, #3d7e90 0%, #3d7e90 100%) !important;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #fff !important;
+  letter-spacing: 2px;
+}
+
+.nav-link {
+  color: #f1f5f9 !important;
+  font-weight: 500;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  color: #fff !important;
+  text-decoration: underline;
+}
+
+.container.my-5 {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(99, 102, 241, 0.08);
+  padding: 2rem 2.5rem;
+}
+
+h1,
+h2 {
+  color: #6a9599;
+  font-weight: 700;
+}
+
+.btn-dark,
+.btn-outline-dark {
+  border-radius: 20px;
+  padding: 0.4rem 1.2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.btn-dark {
+  background: linear-gradient(90deg, #16100f 0%, #16100f 100%);
+  border: none;
+  color: #fff;
+}
+
+.btn-dark:hover,
+.btn-outline-dark:hover {
+  background: #2a3a3c;
+  color: #fff;
+}
+
+table.table {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+thead {
+  background: linear-gradient(90deg, #a2482c 0%, #16100f 100%);
+  color: #fff;
+}
+
+tbody tr:hover {
+  background: #fef3c7;
+  transition: background 0.2s;
+}
+
+.alert-dark {
+  background: #16100f;
+  color: #fff;
+  border: none;
+}
+
+footer {
+  font-size: 1rem;
+  color: #1a1514;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 2rem;
+}
