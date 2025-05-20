@@ -117,7 +117,6 @@ def reset_password(token):
             flash("Password is required.", "danger")
             return render_template('reset_password.html')
         user.set_password(password)
-        # No need to clear token, since it's stateless
         db.session.commit()
         flash("Password reset successful! Please log in.", "success")
         return redirect(url_for('login'))
@@ -129,8 +128,6 @@ def logout():
     session.pop('user_id', None)
     flash('Logged out.', 'info')
     return redirect(url_for('login'))
-
-session.pop('_flashes', None)
 
 @app.route("/", methods=["GET", "POST"])
 @login_required
