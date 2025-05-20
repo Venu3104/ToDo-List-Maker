@@ -192,6 +192,11 @@ def search():
     ]
     return jsonify(results)
 
+@app.route("/download-db")
+def download_db():
+    db_path = os.path.join(os.getcwd(), 'todo.db')
+    return send_file(db_path, as_attachment=True)
+
 @app.context_processor
 def inject_now():
     return {'now': datetime.now}
