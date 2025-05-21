@@ -67,12 +67,15 @@ def login():
         email = request.form['email']
         password = request.form['password']
         user = User.query.filter_by(email=email).first()
-        if user and user.check_password(password):
+        if not user:
+            flash('Email not registered. Please register first.', 'danger')
+            return redirect(url_for('register'))
+        if user.check_password(password):
             session['user_id'] = user.id
             flash('Logged in successfully!', 'success')
             return redirect(url_for('hello_world'))
         else:
-            flash('Invalid email or password', 'danger')
+            flash('Invalid password.', 'danger')
     return render_template('login.html')
 
 @app.route('/forgot-password', methods=['GET', 'POST'])
