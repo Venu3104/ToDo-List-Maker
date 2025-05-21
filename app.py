@@ -191,6 +191,11 @@ def search():
     ]
     return jsonify(results)
 
+@app.route('/admin/users')
+def admin_users():
+    users = User.query.all()
+    return render_template('admin_users.html', users=users)
+
 @app.route("/download-db")
 def download_db():
     db_path = os.path.join(os.getcwd(), 'todo.db')
